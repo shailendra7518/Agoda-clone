@@ -76,7 +76,7 @@ export const Navbar = () => {
                     <Button className={classes.secondary} variant="outlined" color="secondary" >
                         List your place</Button>
                     
-                    <Link to="" style={{textDecoration: "none"}}>
+                    <Link to="/login" style={{textDecoration: "none"}}>
                         <Button className={classes.primary} color="primary" >Sign in</Button>
                     </Link>
 
