@@ -2,10 +2,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid transparent;
+  }
+  .flex{
+      display: flex;
   }
   .navbar_left {
     display: flex;
     align-items: center;
+  }
+  .navbar_left p{
+      margin-top: 1px;
   }
   .navbar_left > div,
   .navbar_right p {

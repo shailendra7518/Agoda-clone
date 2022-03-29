@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom"
-import {Avatar,Box,Button} from "@material-ui/core";
+import { Link } from "react-router-dom";
+import {Avatar,Button} from "@material-ui/core";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { makeStyles } from "@material-ui/core/styles";
@@ -32,15 +32,7 @@ const useStyles = makeStyles({
             border : "1px solid #FF567D"
         }
     },
-    box : {
-        fontSize : "17px",
-        fontWeight : 600,
-        backgroundColor : "#eee",
-        textAlign : "center",
-        padding: "10px",
-        zIndex : "-1",
-        
-    }
+    
 });
 
 export const Navbar = () => {
@@ -50,7 +42,7 @@ export const Navbar = () => {
        
             <div className="navbar">
                 <div className="navbar_left">
-                    <Link to="/" >
+                    <Link to="">
                         <img className="header_logo" src="https://cdn6.agoda.net/images/kite-js/logo/agoda/color-default.svg" alt="logo" />
                     </Link>
                     <div>
@@ -64,8 +56,9 @@ export const Navbar = () => {
                     </div>
                     <div>
                         <p>Today's deals</p>
+                        
                     </div>
-                    <div>
+                    <div className="flex">
                         <ApartmentIcon />
                         <p>Apartments</p>
                     </div>
@@ -83,11 +76,11 @@ export const Navbar = () => {
                     <Button className={classes.secondary} variant="outlined" color="secondary" >
                         List your place</Button>
                     
-                    <Link to={""} >
+                    <Link to="" style={{textDecoration: "none"}}>
                         <Button className={classes.primary} color="primary" >Sign in</Button>
                     </Link>
 
-                    <Link to={""} >
+                    <Link to="" style={{textDecoration: "none"}}>
                         <Button className={classes.primary} variant="outlined" color="primary" >Create account</Button>
                     </Link>
 
