@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import {Avatar,Button} from "@material-ui/core";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { makeStyles } from "@material-ui/core/styles";
+import { IsAuth } from "../context/auth";
 import "./navbar.css";
 
 
@@ -37,6 +38,11 @@ const useStyles = makeStyles({
 
 export const Navbar = () => {
     const classes = useStyles();
+
+    const auth = useContext(IsAuth);
+
+    let userData = JSON.parse(localStorage.getItem("userDetails")) || {};
+   
     return(
         <>
        
@@ -76,14 +82,25 @@ export const Navbar = () => {
                     <Button className={classes.secondary} variant="outlined" color="secondary" >
                         List your place</Button>
                     
-                    <Link to="/login" style={{textDecoration: "none"}}>
-                        <Button className={classes.primary} color="primary" >Sign in</Button>
-                    </Link>
+                    {auth.isAuth ? (
+                        <>
+                            <Avatar src={auth.isAuth ? userData.imageUrl : ""} />
+                            <p>{auth.isAuth ? userData.givenName : ""}</p>
+                            
+                            <Button onClick={() => auth.toggle(!auth.isAuth)} className={classes.primary} variant="outlined" color="primary" >
+                                Sign out</Button>
+                        </>
+                    ) : (
+                        <>
+                            <Link to="/login" style={{textDecoration: "none"}}>
+                                <Button className={classes.primary} color="primary" >Sign in</Button>
+                            </Link>
 
-                    <Link to="" style={{textDecoration: "none"}}>
-                        <Button className={classes.primary} variant="outlined" color="primary" >Create account</Button>
-                    </Link>
-
+                            <Link to="" style={{textDecoration: "none"}}>
+                                <Button className={classes.primary} variant="outlined" color="primary" >Create account</Button>
+                            </Link>
+                        </>
+                    )}
                 </div>
             </div>
         </>
