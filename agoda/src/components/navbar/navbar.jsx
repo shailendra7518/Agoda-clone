@@ -86,7 +86,7 @@ export const Navbar = () => {
                         <>
                             <Avatar src={auth.isAuth ? userData.imageUrl : ""} />
                             <p>{auth.isAuth ? userData.givenName : ""}</p>
-                            
+
                             <Button onClick={() => auth.toggle(!auth.isAuth)} className={classes.primary} variant="outlined" color="primary" >
                                 Sign out</Button>
                         </>
@@ -96,7 +96,7 @@ export const Navbar = () => {
                                 <Button className={classes.primary} color="primary" >Sign in</Button>
                             </Link>
 
-                            <Link to="" style={{textDecoration: "none"}}>
+                            <Link to="/register" style={{textDecoration: "none"}}>
                                 <Button className={classes.primary} variant="outlined" color="primary" >Create account</Button>
                             </Link>
                         </>

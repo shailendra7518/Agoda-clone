@@ -8,11 +8,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@google-pay/button-react": "^3.0.0",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
     "@mui/icons-material": "^5.5.1",
+    "font-awesome": "^4.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-google-login": "^5.2.2",
+    "react-google-recaptcha": "^2.1.0",
+    "react-icons": "^4.3.1",
+    "react-recaptcha": "^2.3.10",
+    "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2",
     "redux": "^4.1.2"
   },
