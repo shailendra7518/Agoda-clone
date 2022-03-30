@@ -19,8 +19,8 @@ body{
     display: flex;
     left: 40%;
     border-radius: 11px;
-  background: #ffffff;
-  box-shadow:  12px 12px 24px #d9d9d9,
+    background: #ffffff;
+    box-shadow:  12px 12px 24px #d9d9d9,
                -12px -12px 24px #ffffff;
     /* border: 1px solid; */
   }
@@ -187,6 +187,7 @@ body{
   .confirm .MuiFormControlLabel-label:hover{ 
      color: rgb(83,146,249);
   }
+
     .captcha{
        width: 300px;
        margin: auto;
@@ -201,8 +202,8 @@ body{
       color: white;
       border: none;
       border-radius: 4px;
-    box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
-  cursor: pointer;
+      box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
+      cursor: pointer;
     }
     .signup-btn:hover{
       background-color:rgba(83,146,249,.8);
@@ -215,6 +216,7 @@ body{
       margin-bottom: 15px;
     }
     .break .line{
+      
       margin-bottom: 25px;
     }
     .break p{

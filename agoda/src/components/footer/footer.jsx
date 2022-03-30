@@ -46,7 +46,7 @@ export const Footer = () => {
             <div className="copyrightFooter">
             <p>👉 @ All material herein © 2005–2022 Agoda Company Pte. Ltd. All Rights Reserved.✌</p>
             <p>Agoda is part of Booking Holdings Inc., the world leader in online travel & related services.</p>
-            <div className="footerlogos">
+            {/* <div className="footerlogos">
                 <div>
                     <img className="header_logo" src="https://cdn5.agoda.net/ycs/dist/images/agoda-logo-2OYtJ.png" alt="logo" />
                 </div>
@@ -65,7 +65,7 @@ export const Footer = () => {
                 <div>
                     <img className="header_logo" src="https://seekvectorlogo.com/wp-content/uploads/2018/01/opentable-vector-logo.png" alt="opentablelogo"/>
                 </div>
-            </div>
+            </div> */}
 
            </div>
         </div>

@@ -11,12 +11,12 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { Link } from "react-router-dom";
 import { Navbar } from "../navbar/navbar";
 import { Footer } from "../footer/footer";
-import { IsAuth } from "../context/auth";
+// import { IsAuth } from "../context/auth";
 
 export const Register = () => {
     const [isLoading, setLoading] = useState(false);
-    const [isAuth, setAuth] = useState(false);
-    const Auth = useContext(IsAuth);
+    // const [isAuth, setAuth] = useState(false);
+    // const Auth = useContext(IsAuth);
 
     useEffect( () => {
         setLoading(true);
@@ -34,20 +34,23 @@ export const Register = () => {
         console.log("Captcha value: ", value);
     }
 
-    function responseGoogle(res) {
-        Auth.user = res;
-        localStorage.setItem("userDetails", JSON.stringify(res.profileObj));
-        Auth.toggle(!Auth.isAuth);
+    function responseGoogle(response) {
+        console.log("successfully registred")
+        console.log(response)
+        console.log(response.profileObj)
+        // Auth.user = res;
+        localStorage.setItem("userDetails", JSON.stringify(response.profileObj));
+        // Auth.toggle(!Auth.isAuth);
     }
 
-    if(Auth.isAuth) {
-        return <Link to="/" />
-    }
+    // if(Auth.isAuth) {
+    //     return <Link to="/" />
+    // }
 
     return isLoading ? <Loading /> : (
         <>
             <Navbar />
-            <div className="register-page">
+            <div className="resister-page">
                 <div className="signup">
                     <Typography variant="h6" style={{fontSize:25, fontWeight:500}} >
                         Signup
@@ -138,7 +141,7 @@ export const Register = () => {
                     </div>
 
                     <div className="line"></div>
-
+                   <br/>
                     <div className="google al">
                         Already have an account? <Link to="/login">Sign in</Link>
                     </div>

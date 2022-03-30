@@ -2,7 +2,7 @@ import { Typography, FormControlLabel, Checkbox } from "@material-ui/core";
 import React, {useState, useEffect, useContext, useRef} from "react";
 import { Loading } from "./loading";
 import "./authStyles.css";
-import {IsAuth} from "../context/auth";
+// import {IsAuth} from "../context/auth";
 import {Navbar} from "../navbar/navbar.jsx";
 import {Footer} from "../footer/footer.jsx";
 import { Link } from "react-router-dom";
@@ -13,7 +13,7 @@ import { FcGoogle } from "react-icons/fc"
 
 export const Login = () => {
     const [isLoading, setLoading] = useState(false);
-    const Auth = useContext(IsAuth);
+    // const Auth = useContext(IsAuth);
     const googlee = useRef();
 
     useEffect(() => {
@@ -28,23 +28,27 @@ export const Login = () => {
         })
     },[])
 
-    function responseGoogle(res){
-        Auth.user = res;
-        localStorage.setItem("userDetails", JSON.stringify(res.profileObj));
-        Auth.toggle(!Auth.isAuth);
+    function responseGoogle(response){
+        console.log("Success")
+        console.log(response)
+        console.log(response.profileObj)
+        // Auth.user = res;
+        localStorage.setItem("userDetails", JSON.stringify(response.profileObj));
+        // Auth.toggle(!Auth.isAuth);
 
     }
-    if(Auth.isAuth) {
-        return <Link to="/" />
-    }
+    // if(Auth.isAuth) {
+    //     return <Link to="/" />
+    // }
 
     return isLoading ? <Loading /> : (
         <>
             <Navbar />
             <div className="resister-page">
                 <div className="signup">
-                    <Typography>Sign in</Typography>
-                    <Typography variant="p" >For security, please sign in to access your information</Typography>
+                    <Typography variant="h5">Sign in</Typography>
+                    <br/>
+                    <Typography variant="subtitle1" >For security, please sign in to access your information</Typography>
                     <div className="mode-switch">
                         <div className="auth-active">EMAIL</div>
                         <div className="auth-disabled">MOBILE</div>
@@ -71,14 +75,15 @@ export const Login = () => {
 
                     <div className="break">
                         <div className="line"></div>
-                        <p>or sign in with</p>
+                        <p> or sign in with </p>
                     </div>
 
                     <div className="google">
                         <FcGoogle style={{marginRight:10, width:25, height:25}} />
-                        <GoogleLogin style={{height:20}} ref={googlee} buttonText="Google"
+                        <GoogleLogin style={{height:20}} ref={googlee} 
                             clientId="979909697763-pe6gr2hbnarqpvdj31fh3ak86gfacg7a.apps.googleusercontent.com"
                             render={(el) => <button onClick={el.onClick}>Google</button>}
+                            buttonText="Google"
                             onSuccess={responseGoogle}
                             onFailure={responseGoogle}
                             cookiePolicy={"single_host_origin"}
