@@ -8,7 +8,7 @@ import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
 import { SiFacebook } from "react-icons/si";
 import Recaptcha, { ReactRecaptcha } from "react-recaptcha";
 import ReCAPTCHA from "react-google-recaptcha";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Navbar } from "../navbar/navbar";
 import { Footer } from "../footer/footer";
 import { IsAuth } from "../context/auth";
@@ -41,7 +41,7 @@ export const Register = () => {
     }
 
     if(Auth.isAuth) {
-        return <Redirect to="/" />
+        return <Link to="/" />
     }
 
     return isLoading ? <Loading /> : (
@@ -105,7 +105,7 @@ export const Register = () => {
                         <div className="line"></div>
                     </div>
 
-                    {/* <div className="google">
+                    <div className="google">
                         <FcGoogle style={{ marginRight: 10, width: 25, height: 25 }} />
                         <GoogleLogin
                         clientId="979909697763-pe6gr2hbnarqpvdj31fh3ak86gfacg7a.apps.googleusercontent.com"
@@ -115,7 +115,7 @@ export const Register = () => {
                         onFailure={responseGoogle}
                         cookiePolicy={"single_host_origin"}
                         />
-                    </div> */}
+                    </div>
 
                     <div className="social">
                         <div className="buttons" variant="outlined">

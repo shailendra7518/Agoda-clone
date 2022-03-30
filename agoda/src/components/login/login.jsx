@@ -5,7 +5,7 @@ import "./authStyles.css";
 import {IsAuth} from "../context/auth";
 import {Navbar} from "../navbar/navbar.jsx";
 import {Footer} from "../footer/footer.jsx";
-import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import GoogleLogin from "react-google-login";
 import { FaApple } from "react-icons/fa";
 import { SiFacebook } from "react-icons/si";
@@ -35,7 +35,7 @@ export const Login = () => {
 
     }
     if(Auth.isAuth) {
-        return <Redirect to="/" />
+        return <Link to="/" />
     }
 
     return isLoading ? <Loading /> : (
