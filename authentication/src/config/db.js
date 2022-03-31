@@ -1,9 +1,8 @@
 const mongoose = require("mongoose")
+require("dotenv").config();
 
 const connect = () => {
-    return mongoose.connect(
-        "mongodb+srv://durga:durga_123@cluster0.ppkiq.mongodb.net/agodaAuthentication?retryWrites=true&w=majority"
-    )
+    return mongoose.connect(process.env.MONGO_URL)
 }
 
 module.exports = connect
