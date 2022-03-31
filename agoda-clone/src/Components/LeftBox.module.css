@@ -1,0 +1,28 @@
+.check{
+    cursor: text;
+    font-weight: 400;
+    padding-top: 22px;
+    padding-bottom: 7px;
+    font-size: 12px;
+    color: #5a5b5b;
+    border: 1px solid green;
+    width: 30%;
+    height: 80%;
+    margin-right: 20px;
+
+}
+
+.map{
+    position: relative;
+}
+
+.maparrow{
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    /* top: 20px; */
+    left: 90px;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
