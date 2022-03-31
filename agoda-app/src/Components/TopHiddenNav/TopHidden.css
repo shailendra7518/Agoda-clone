@@ -1,0 +1,102 @@
+.main_top_div{
+    width: 100%;
+    background-color: rgb(27, 27, 108);
+    height: 60px;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 20;
+    align-items: center;
+}
+.div_for_search{
+    background-color: white;
+    width: 23%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 10px;
+}
+.div_for_input{
+    width: 20%;
+    background-color: white;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 10px;
+
+}
+.top_date_input:hover{
+    cursor: pointer;
+}
+.div_for_select{
+    width: 20%;
+    height: 80%;
+    background-color: white;
+    justify-content: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+}
+.button_for_search{
+    width:7% ;
+    height: 80%;
+    background-color: cornflowerblue;
+}
+.top_serach_input{
+    height: 90%;
+    width: 85%;
+    outline: none;
+    border: 0px;
+    font-size: 1.2vw;
+}
+.top_date_input{
+    width: 43%;
+    font-size: 1.2vw;
+    padding: 1%;
+    border: 0px;
+    outline: none;
+
+}
+.top_serach_input:hover{
+    cursor: pointer;
+}
+.top_select_adult{
+    width: 80%;
+    height: 90%;
+    font-size: 1.2vw;
+    outline: none;
+    border: 0px;
+    
+}
+.top_select_adult:hover{
+    cursor: pointer;
+}
+.button_for_search{
+    font-size: 1vw;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+}
+.button_for_search:hover{
+    transition: 0.2s ease-in-out;
+    background-color: rgb(142, 178, 245);
+    cursor: pointer;
+}
+
+.top-perpendicular-line {
+    width: 13%;
+    margin: auto;
+   
+   
+    transform: rotate(90deg);
+    border: 0.5px solid grey;
+    
+  }
