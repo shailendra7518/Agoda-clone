@@ -3,6 +3,7 @@ import { Login } from './components/login/login'
 import { Register } from './components/login/register'
 import { Navbar } from './components/navbar/navbar'
 import { ProductLeftPage } from './product/leftproductpage'
+import { ProductPage } from './product/productpage'
 
 function App() {
 
@@ -13,7 +14,9 @@ function App() {
       {/* <Register /> */}
       {/* <Footer /> */}
 
-      <ProductLeftPage />
+        <ProductPage />
+      {/* <ProductLeftPage /> */}
+
     </div>
   )
 }
