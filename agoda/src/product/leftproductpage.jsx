@@ -326,8 +326,7 @@ export const ProductLeftPage = () => {
                         Private beach (3)
                     </span>
                 </div>
-                <br/>
-                <div className="borderline"></div>
+                
             </div>
 
         </>
