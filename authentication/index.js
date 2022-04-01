@@ -1,19 +1,15 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
-
+require("dotenv").config();
+const PORT=process.env.PORT || 8080
 const connect = require("./src/config/db")
 const authRoute = require("./src/controllers/auth")
 
-app.use("/api/auth", authRoute);
-
-// const {register , login} = require("./controllers/auth.controller")
-// app.post("/register", register);
-
-// app.post("/login", login);
+app.use("/auth", authRoute);
 
 
-app.listen(8080, async (req,res) => {
+app.listen(PORT, async (req,res) => {
     try{
         await connect();
         console.log("Backend server 8080 is running!");
@@ -22,3 +18,6 @@ app.listen(8080, async (req,res) => {
        console.log(err.message);
     }
 })
+
+// https://agoda-auth.herokuapp.com/auth/login
+// https://agoda-auth.herokuapp.com/auth/register

@@ -10,11 +10,22 @@ import GoogleLogin from "react-google-login";
 import { FaApple } from "react-icons/fa";
 import { SiFacebook } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc"
+import { login } from "../authContext/apiCalls";
+import { AuthContext } from "../authContext/authContext";
 
 export const Login = () => {
+    const [email,setEmail] = useState("");
+    const [password,setPassword] = useState("");
     const [isLoading, setLoading] = useState(false);
+    const {isFetching, dispatch} = useContext(AuthContext)
     // const Auth = useContext(IsAuth);
     const googlee = useRef();
+
+    const handleLogin = () => {
+        console.log("login button");
+        login({email,password}, dispatch);
+      
+    }
 
     useEffect(() => {
         setLoading(true);
@@ -37,10 +48,12 @@ export const Login = () => {
         // Auth.toggle(!Auth.isAuth);
 
     }
-    // if(Auth.isAuth) {
-    //     return <Link to="/" />
-    // }
-
+    
+        // if(Auth.isAuth) {
+        //     return <Redirect to="/" />
+        // }
+    
+    
     return isLoading ? <Loading /> : (
         <>
             <Navbar />
@@ -56,12 +69,12 @@ export const Login = () => {
 
                     <div className="inputs">
                         <label>Email</label>
-                        <input type="email" placeholder="Email" />
+                        <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
                     </div>
 
                     <div className="inputs">
                         <label>Password</label>
-                        <input type="password" placeholder="First Name" />
+                        <input type="password" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
                     </div>
 
                     <div className="confirm" style={{ marginTop: 20 }}>
@@ -71,7 +84,10 @@ export const Login = () => {
                         />
                     </div>
 
-                    <button className="signup-btn">Sign Up</button>
+                    <button className="signup-btn"
+                       
+                        onClick={() =>handleLogin() }
+                         >Sign In</button>
 
                     <div className="break">
                         <div className="line"></div>

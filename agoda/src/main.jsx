@@ -5,13 +5,14 @@ import App from './App'
 
 import {BrowserRouter} from "react-router-dom"
 import { AppProvider } from "../src/components/context/provider"
-// import "@fortawesome/fontawesome-free/css/all.min.css";
-// import "font-awesome/css/font-awesome.min.css";
+import { AuthContextProvider } from './components/authContext/authContext'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <AuthContextProvider>
+          <App />
+      </AuthContextProvider>    
     </BrowserRouter>   
   </React.StrictMode>,
   document.getElementById('root')
