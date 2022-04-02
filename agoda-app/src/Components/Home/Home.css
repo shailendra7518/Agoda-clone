@@ -1,0 +1,231 @@
+.container{
+    height:100%;
+    width: 100%;
+    /* border: 2px solid red; */
+    /* background-color: rgb(228, 197, 197); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+.banner_and_blurbox{
+    height: 700px;
+    width: 100%;
+   /* background-color: gray; */
+   /* border: 10px solid black; */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+   
+}
+.banner_div{
+    height: 400px;
+    width: 100%;
+ /* border: 2px solid red; */
+    /* background-color: bisque; */
+    margin-top: -30px;
+    text-align: center;
+    color: white;
+    background-image: url("https://cdn6.agoda.net/images/accommodation/backdrop/private-villas.jpg");
+    background-size: cover;
+}
+
+.blurbox{
+    height: 350px;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;
+    margin-top: -130px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.search_area{
+    height: 450px;
+    width: 80%;
+    /* border: 2px solid red; */
+    margin-top: -410px;
+    background-color: transparent;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 23px;
+    align-items: center;
+     padding-top: 10px;
+  /*  padding-bottom: 60px; */
+
+   
+
+}
+.facility_bar{
+    width: 88%;
+    height: 90px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
+
+}
+.click_option{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.click_option:hover{
+  border-bottom: 3px solid skyblue;
+  cursor: pointer;
+}
+.search_box{
+    height: 65px;
+    width:80% ;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 5px;
+    margin-top: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.date_and_gest{
+    width: 80%;
+    height: 65px;
+    /* background-color: white; */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 5px;
+    justify-content: space-between;
+}
+.search_button{
+    width:40% ;
+    height: 10vh;
+    background-color: rgb(60, 200, 255);
+    border-radius: 10px;
+    margin-top: 60px;
+    border: 0px;
+    transition: 0.2s ease-in;
+    font-size: 1.6vw;
+    color: white;
+
+    
+}
+.search_button:hover{
+background-color: skyblue;
+cursor: pointer;
+}
+
+.serach_input{
+  height: 90%;
+  font-size: 1.4vw;
+  width: 60%;
+  outline: none;
+  border: 0px;
+}
+.date{
+    /* border: 2px solid red; */
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.date_input{
+    height: 90%;
+    outline: none;
+    border: 0px;
+    width: 40%;
+    font-size: 1.4vw;
+    border-radius: 10px;
+}
+.select_adult_div{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+}
+.select_adult{
+    width: 100%;
+    height: 90%;
+    font-size: 1.3vw;
+    outline: none;
+    border: 0px;
+    background-color: white;
+    border-radius: 10px;
+   
+}
+
+.perpendicular-line {
+    width: 10%;
+    margin: auto;
+   
+   
+    transform: rotate(90deg);
+    border-color: #101214;
+  }
+  
+  .learn_more{
+    height: 70px;
+    width: 70%;
+    /* border: 2px solid red; */
+      padding: 0% 2% 0% 2%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: ghostwhite;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      border-radius: 10px;
+      transition:0.1s ease-in;
+  }
+  .learn_more:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .learn_more-textside{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+  }
+  .learn_more_button{
+      height: 60%;
+      width: 10%;
+      border: 1.5px solid cornflowerblue;
+      transition:0.2s ease-in;
+      border-radius: 5px;
+      color: cornflowerblue;
+      font-size: 1vw;
+  }
+  .learn_more_button:hover{
+      background-color: cornflowerblue;
+      color: white;
+
+  }
+  .see_more_properties{
+      margin-top: 80px;
+      border: 1px solid transparent;
+      background-color: cornflowerblue;
+      width: 200px;
+     border-radius: 5px;
+     color: white;
+      height: 50px;
+      transition: 0.2s ease-in-out;
+  }
+  .see_more_properties:hover{
+     cursor: pointer;
+      background-color: rgb(151, 187, 253);
+  }

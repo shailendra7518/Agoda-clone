@@ -1,0 +1,52 @@
+.main_Topdest_div{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 90px;
+    
+}
+.all_round_image{
+    display: flex;
+    /* border: 2px solid rgb(36, 18, 18); */
+    /* height: 400px; */
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 30px;
+   
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+
+.all_round_image div img{
+    border-radius: 50%;
+    height: 160px;
+    transition: 0.3s ease-in-out;
+}
+.all_round_image>div>img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}
+.slider_button_round{
+    /* border: 2px solid rgb(72, 255, 0); */
+    width: 100%;
+  
+    display: flex;
+    font-size: 3vw;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -150px;
+    margin-bottom: 100px;
+}
+.all_round_image div h4,p{
+    padding: 0px;
+   margin: 0px;
+   text-align: center;
+}
