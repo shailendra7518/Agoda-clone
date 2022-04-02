@@ -1,0 +1,69 @@
+.myfirstdiv{
+    /* border: 2px solid red; */
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: 50%,200px;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas: 
+    "a a a a a a a a a c c c"
+    "b b b b b b b b b c c c";
+    grid-gap: 10px;
+  
+    
+    
+  }
+  .myfirstdiva{
+    grid-area: a;
+    /* border: 2px solid green; */
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 200px;
+    grid-template-areas: 
+    "A A A A A A B B B B B B"
+    "A A A A A A C C C D D D";
+ grid-gap: 10px;
+  }
+  .myfirstdivb{
+    grid-area: b;
+    /* border: 2px solid rgb(98, 146, 98); */
+  
+  }
+  .myfirstdivc{
+    grid-area: c;
+    /* border: 2px solid rgb(219, 138, 16); */
+  
+  }
+  
+  .myfirstdiva1{
+    grid-area: A;
+    /* border: 2px solid rgb(23, 219, 16); */
+  
+  }
+  
+  .myfirstdiva2{
+    grid-area: B;
+    /* border: 2px solid rgb(219, 138, 16); */
+  
+  }
+  
+  .myfirstdiva3{
+    grid-area: C;
+    /* border: 2px solid rgb(219, 16, 40); */
+  
+  }
+  .myfirstdiva4{
+    grid-area: D;
+    /* border: 2px solid rgb(36, 16, 219); */
+  
+  }
+  .myfirstdiv img{
+      height: 100%;
+      width: 100%;
+  }
+  .wifi>img{
+      height: 100%;
+      width: 800%;
+
+  }
