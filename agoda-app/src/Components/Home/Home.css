@@ -229,23 +229,3 @@ cursor: pointer;
      cursor: pointer;
       background-color: rgb(151, 187, 253);
   }
-
-
-
-
-  rooms=[
-    {
-        room image:"",
-        type:""
-        lowPrice:{
-            withoutDiscount:"",
-            withDiscount:""
-        },
-        highPrice:{
-            withoutDiscount:"",
-            withDiscount:""
-        }
-
-    },
-
-  ]
