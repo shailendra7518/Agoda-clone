@@ -63,7 +63,7 @@ First you have to have to go to the signup page and create a new account. After 
 <h3>Shailendra Kumar</h3>
 <li>Github : https://github.com/shailendra7518</li>
 <h3>Durga Bhavani V</h3>
-<li>Github : https://github.com/db648/li>
+<li>Github : https://github.com/db648</li>
 <h3>Dhirendra Kumar Jaiswal</h3>
 <li>Github : https://github.com/dk-jaiswal-77</li>
 <h3>Devesh Verma</h3>
@@ -92,5 +92,5 @@ First you have to have to go to the signup page and create a new account. After 
 
 ## Key Links
 - [Link to Hosted Website](https://agoda-clone-website.vercel.app/)
-- [Link to Blog]()
+
 
