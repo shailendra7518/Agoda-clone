@@ -1,0 +1,145 @@
+*{
+    color: rgba(00, 00, 00, 0.8);
+}
+
+.container{
+    box-shadow: var(--box__shadow);
+    padding: 1rem 1rem;
+}
+
+label{
+    font-size: 0.9rem;
+}
+
+.customer__form{
+    margin-bottom: 0.8rem;
+}
+
+.customer__form > div{
+    /* border: 1px solid red; */
+    margin: 0.7rem 0rem;
+}
+
+.full_size, #country, #phone__number{
+    width: 100%;
+    font-size: 1rem;
+    color: grey;
+}
+
+.entry{
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: 1px solid slategray;
+}
+
+.entry:focus{
+    outline: none;
+    box-shadow: 0px 0px 4px 0px var(--primary__color);
+}
+
+label.entry_label{
+    display: block;
+    margin-bottom: 6px;
+}
+
+select{
+    background: transparent;
+}
+
+.h3_margin_top{
+    margin-top: 2.2rem;
+}
+
+#request_toggle_container{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+#request_toggle_container > span{
+    color: var(--primary__color);
+}
+
+#request_toggle_container > span:last-child{
+    text-decoration: underline;   
+}
+
+#request_operator_sign{
+    width: 1.2rem;
+    height: 1.2rem;
+    /* padding: 0.1rem; */
+    font-size: 1.3rem; 
+    border: 1px solid var(--primary__color);
+    border-radius: 50%;   
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact_and_country{
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact_and_country > div{
+    width: 49%;
+    /* border: 1px solid green; */
+}
+
+#contact_and_country > div .entry{
+    width: 100%;
+}
+
+.radio, .checkbox{
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.8rem;
+    accent-color: var(--primary__color);
+}
+
+.checkbox_container, .radio_container{
+    display: flex;
+    align-items: center;
+}
+
+.react_icon{
+    margin-right: 0.8rem;
+}
+
+.radio_label, .react_icon{
+    display: flex;
+    align-items: center;
+}
+
+#preference_and_configuration{
+    padding: 0.8rem;
+    background: #f9f9f9;
+}
+
+#preference_and_configuration > div{
+    margin: 1.3rem 0rem;
+}
+
+#preference, #configuration{
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem auto;
+}
+
+#preference > div , #configuration > div{
+    width: 49%;
+    /* border: 1px solid yellow; */
+}
+
+#more_requests_container{
+    padding: 0.8rem;
+}
+
+#requests{
+    /* border: 1px solid green; */
+    margin: 0.7rem 0rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.7rem 0.9rem;
+}

@@ -1,0 +1,66 @@
+
+.checkout__container{
+    /* border: 1px solid red; */
+    width: var(--container__size-lg);
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 0.8rem;
+}
+
+.checkout__container-left, .checkout__container-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+} 
+
+.button_container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.button_container > p{
+    align-self: flex-start;
+    font-size: 0.85rem;
+}
+
+.button_container > p > a{
+    text-decoration: none;
+    color: var(--primary__color);
+}
+
+.button_container > p > a:hover{
+    text-decoration: underline;
+}
+
+.button_container > button, .button_container > span{
+    align-self: flex-end;
+}
+
+button{
+    padding: 0.9rem 3.8rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background: var(--primary__color);
+    border: none;
+    border-radius: 0.25rem;
+}
+
+button:hover{
+    background: var(--hover__color);
+}
+
+button:active{
+    background: var(--primary__color);
+}
+
+.button_container > span{
+    color: green;
+    background-color: rgb(231, 251, 231);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin: 0.4rem 0rem 0.9rem;
+}
