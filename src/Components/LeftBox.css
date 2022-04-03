@@ -1,0 +1,135 @@
+.check{
+    cursor: text;
+    font-weight: 400;
+    padding-top: 22px;
+    padding-bottom: 7px;
+    font-size: 12px;
+    color: #5a5b5b;
+    /* border: 1px solid green; */
+    width: 30%;
+    margin-right: 20px;
+
+}
+
+
+.map{
+    position: relative;
+}
+
+.para {
+    font-size: 14px;
+   font-weight: 500;
+    color: #5a5b5b;
+  /* border: 1px solid green; */
+   
+}
+
+
+.maparrow{
+    position: absolute;
+    left: 40%;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+.maparrow > img {
+    margin-top: 40px;
+}
+.captionOverImage{
+    bottom: 10%;
+    color: #3c3c3c;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.filterMain{
+    overflow: hidden;
+    padding-bottom: 30px;
+    position: relative;
+    width: 100%;
+    /* border: 1px solid green; */
+}
+
+
+
+.listFilter{
+    list-style: none;
+    
+}
+
+.star{
+    text-align: center;
+    line-height: 1;
+    position: absolute;
+    top: 3px;
+    background: #fff;
+    border-radius: 2px;
+    left: 30px;
+}
+
+
+
+.checkboxIcon{
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 1;
+    position: absolute;
+    top: 2;
+    left: 0;
+    background: #fff;
+    /* border: 1px solid #e8e8e8; */
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+
+.filterText{
+    text-align: center;
+    line-height: 1;
+    position: absolute;
+    top: 3px;
+    background: #fff;
+    border-radius: 2px;
+    left: 30px; 
+    color: #5a5b5b;
+    font-weight: 500;
+}
+
+.filterText:hover{
+    color: #0283df;
+    cursor: pointer; 
+}
+
+.borderline{
+    width: 84%;
+    margin-left: 9px;
+    border-bottom: 2px solid gainsboro;
+  }
+
+  .filterhead{
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+
+     position: relative;
+  }
+
+  .listFilter a {
+      color: #0283df;
+      text-decoration: none;
+  }
+
+  .listFilter a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+  
