@@ -91,7 +91,7 @@ First you have to have to go to the signup page and create a new account. After 
 ![](https://user-images.githubusercontent.com/87424668/161422815-17c4c0fc-23bf-4c17-a1ef-a5c39b0121bf.png)
 
 ## Key Links
-- [Link to Hosted Website](https://agoda-clone-website.vercel.app/)
-- [Link to blog](https://medium.com/@ritikagupta11294/agoda-clone-c5d11f221d28)
+- [Link to Hosted Website] (https://agoda-clone-website.vercel.app/)
+- [Link to blog] (https://medium.com/@ritikagupta11294/agoda-clone-c5d11f221d28)
 
 
