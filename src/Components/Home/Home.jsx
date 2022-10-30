@@ -29,7 +29,7 @@ const handlechange=(e)=>{
 }
 const handdlesearch=()=>{
 
-  axios.get(`https://blooming-brook-61650.herokuapp.com/findhotels/${Searchdata.destination}`)
+  axios.get(`https://agoda-clone.cyclic.app/${Searchdata.destination}`)
   .then(function (response) {
     // handle success
     console.log(response);
