@@ -3,15 +3,15 @@ import { BsSearch} from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-
+import { Loading } from "../LoginSignup/login/loading";
 export function TopHidden(){
-
+const [loading,setloading]=useState(false)
   const navigate=useNavigate()
-  const [Searchdata,setSearchdata]=useState({
+  let [Searchdata,setSearchdata]=useState({
     destination:"",
     start_date:"",
     end_date:"",
-    adult:""
+    adult:"1"
   })
   
   const handlechange=(e)=>{
@@ -19,15 +19,25 @@ export function TopHidden(){
     setSearchdata({...Searchdata,[id]:value})
   }
   const handdlesearch=()=>{
-    
-  axios.get(`https://blooming-brook-61650.herokuapp.com/findhotels/${Searchdata.destination}`)
+    if(Searchdata.start_date=="" || Searchdata.end_date=="" ||Searchdata.destination=="" ){
+     
+      alert("please fill all area")
+      return
+    }
+    setloading(true)
+    let result=Searchdata.destination.toLowerCase()
+       
+    console.log(result)
+  axios.get(`https://agoda-clone.cyclic.app/findhotels/${result}`)
   .then(function (response) {
     // handle success
     console.log(response);
     let hotels=response.data
     localStorage.setItem("Allhotels",JSON.stringify(hotels))
+    setloading(false)
     // setloading(false)
     navigate("/productpage")
+   
   })
   .catch(function (error) {
     // handle error
@@ -41,17 +51,17 @@ export function TopHidden(){
 
 
 
-     return <div className="main_top_div">
+     return loading ? <Loading/>: <div className="main_top_div">
          <div className="div_for_search">
              <BsSearch fontSize={"2vw"}/>
-           <input type="text" className="top_serach_input" id="destination" onChange={handlechange} />
+           <input type="text" placeholder="Search place like Mumbai, etc" className="top_serach_input" id="destination" onChange={handlechange}  required  />
          </div>
          <div className="div_for_input">
-         <input type="date" id="start_date" className="top_date_input" onChange={handlechange} />
+         <input type="date" id="start_date" className="top_date_input" onChange={handlechange} required />
           <hr className="top-perpendicular-line"/>
-           <input  type="date" name="" id="end_date" className="top_date_input" onChange={handlechange}/>
+           <input  type="date" name="" id="end_date" className="top_date_input" onChange={handlechange} required/>
          </div>
-         <div className="div_for_select">
+         <div className="div_for_select" >
          <select name="" className="top_select_adult" id="adult" onChange={handlechange}>
               <option value="1">1 adult</option>
               <option value="2">2 adult</option>

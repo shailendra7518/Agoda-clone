@@ -14,7 +14,7 @@ body{
     position: absolute;
     width: 300px;
     top: 35%;
-  
+  z-index: 5000;
     height: 200px;
     display: flex;
     left: 40%;

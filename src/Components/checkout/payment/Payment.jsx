@@ -46,6 +46,7 @@ export const Payment = () => {
     function saveBookingDetails(){
         let bookingDetails = {...customerInformation, ...paymentInformation};
         localStorage.setItem("bookingDetails", JSON.stringify(bookingDetails));
+        localStorage.removeItem("information")
         Navigate("/");
     }
 
@@ -109,7 +110,7 @@ export const Payment = () => {
 
                     <div>
                         <label htmlFor="card_holder_name" className="entry_label">Card holder name</label>
-                        <input type="text" id="card_holder_name" className="entry full_size" onChange={(e)=>{
+                        <input  type="text" id="card_holder_name" className="entry full_size" onChange={(e)=>{
                             handleChange(e);
                         }} />
                     </div>

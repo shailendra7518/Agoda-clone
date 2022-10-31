@@ -1,6 +1,6 @@
 import "../Home/Home.css";
-import { BsSearch,BsHouse ,BsHouseDoorFill,BsFillCalendarPlusFill} from "react-icons/bs";
-import { RiBuildingFill,RiHome2Fill,RiFlightTakeoffLine } from "react-icons/ri";
+import { BsSearch,BsHouseDoorFill,BsFillCalendarPlusFill} from "react-icons/bs";
+import { RiBuildingFill,RiFlightTakeoffLine } from "react-icons/ri";
 import { ImOffice } from "react-icons/im";
 import { BiShapePolygon} from "react-icons/bi";
 import { FcCalendar } from "react-icons/fc";
@@ -9,37 +9,49 @@ import { TopDest, TopDestOutSide } from "./topdestination/TopDestination";
 import { Vacation } from "./Travelvacation/Vacation";
 import { RecomHome } from "./reccomonded/ReomHome";
 import { NextTrip } from "./Nexttrip/NextTrip";
-import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import{TopHidden} from  "../TopHiddenNav/TopHidden"
 import axios from "axios";
+import { Loading } from "../LoginSignup/login/loading";
 export function Home() {
+  const [loading,setloading]=useState(false)
 const navigate=useNavigate()
 const [Searchdata,setSearchdata]=useState({
   destination:"",
   start_date:"",
   end_date:"",
-  adult:""
+  adult:"1"
 })
 
 const handlechange=(e)=>{
   const{id,value}=e.target
   setSearchdata({...Searchdata,[id]:value})
 }
+console.log(Searchdata.destination)
 const handdlesearch=()=>{
-
-  axios.get(`https://agoda-clone.cyclic.app/${Searchdata.destination}`)
+  if(Searchdata.start_date=="" || Searchdata.end_date=="" ||Searchdata.destination=="" ){
+     
+    alert("please fill all area")
+    return
+  }
+   setloading(true)
+  let result=Searchdata.destination.toLowerCase()
+       
+    console.log(result)
+ 
+  axios.get(`https://agoda-clone.cyclic.app/findhotels/${result}`)
   .then(function (response) {
     // handle success
     console.log(response);
     let hotels=response.data
     localStorage.setItem("Allhotels",JSON.stringify(hotels))
-    // setloading(false)
+    setloading(false)
+
     navigate("/productpage")
   })
   .catch(function (error) {
-    // handle error
+
     console.log(error);
   })
 
@@ -48,7 +60,7 @@ const handdlesearch=()=>{
 }
 console.log(Searchdata)
 
-  return (<>
+  return loading ? (<Loading/>): (<>
   <TopHidden/>
     <div className="container">
       <div className="banner_and_blurbox">
@@ -89,7 +101,7 @@ console.log(Searchdata)
              </div>
            <div className="search_box">
            <BsSearch fontSize={"2vw"}/>
-           <input type="text" className="serach_input" id="destination" onChange={handlechange} />
+           <input placeholder="Search place like Mumbai, etc" type="text" className="serach_input" id="destination" onChange={handlechange}  />
            </div>
          
          <div className="date_and_gest">

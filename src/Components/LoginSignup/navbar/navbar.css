@@ -40,6 +40,7 @@
   .dropMenu {
     position: relative;
     display: inline-block;
+    z-index: 5000;
   }
   .moreIcon {
     color: #555;

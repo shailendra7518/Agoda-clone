@@ -5,57 +5,29 @@ import { loginFailure, loginStart, loginSuccess } from "./authAction";
 
 export const login = async (user, dispatch) => {
   
-  console.log("login button1");
   dispatch(loginStart());
+  
   try {
-    const res = await axios.post("https://mycorsproxy-forauth.herokuapp.com/https://agoda-auth-api.herokuapp.com/auth/login", user)
+  axios.post("https://agoda-clone.cyclic.app/auth/login", user)
     .then((res) => {
       
-    console.log(res)
+    console.log(res.data)
       dispatch(loginSuccess(res.data));
     
     })
-
-    console.log("login button1");
-    
-    
   } catch (err) {
     dispatch(loginFailure());
   }
-
-
-  // axios.post('https://mycorsproxy-forauth.herokuapp.com/https://agoda-auth-api.herokuapp.com/auth/login',user)
-  // .then(function (response) {
-  //   console.log(response);
-  // }).then(()=>{
-  //   let navigate=ToReach()
-  //      navigate('/')
-  // })
-  // .catch(function (error) {
-  //   console.log(error);
-  // });
-
-
-
-
 };
 
 export const Registeruser=async(user)=>{
-  // let navigate=ToReach()
-  //     navigate('/login')
   try {
-    const res = await axios.post("https://mycorsproxy-forauth.herokuapp.com/https://agoda-auth-api.herokuapp.com/auth/register", user)
+    axios.post("https://agoda-clone.cyclic.app/auth/register", user)
     .then((res) => {
       console.log(res)
 
-    
-   
      })
 
-      
-   
-    
-    
   } catch (err) {
     
   }

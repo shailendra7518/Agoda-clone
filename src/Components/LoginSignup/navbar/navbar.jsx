@@ -1,6 +1,6 @@
-import React, {useContext} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import {Avatar,Button} from "@material-ui/core";
+import {Button} from "@material-ui/core";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { makeStyles } from "@material-ui/core/styles";
@@ -42,7 +42,8 @@ export const Navbar = () => {
    // const auth = useContext(IsAuth);
 
     // let userData = JSON.parse(localStorage.getItem("userDetails")) || {};
-    let userdet=JSON.parse(localStorage.getItem("user"))
+    // let userdet=JSON.parse(localStorage.getItem("userDetails")) ||JSON.parse(localStorage.getItem("user"))
+    // console.log(userdet)
     return(
         <>
        
@@ -97,7 +98,7 @@ export const Navbar = () => {
 
                         <>
                             <Link to="/login" style={{textDecoration: "none"}}>
-                                <Button className={classes.primary} color="primary" >{userdet ? userdet.firstname :"Sign in"}</Button>
+                                <Button className={classes.primary} color="primary" >Sign in</Button>
                             </Link>
 
                             <Link to="/register" style={{textDecoration: "none"}}>

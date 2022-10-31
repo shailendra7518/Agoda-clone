@@ -3,68 +3,25 @@ import React, {useState, useEffect, useContext, useRef} from "react";
 import { Loading } from "./loading";
 import "./authStyles.css";
 
-import { loginFailure, loginStart, loginSuccess } from "../authContext/authAction";
-// import {IsAuth} from "../context/auth";
-import {Navbar} from "../navbar/navbar.jsx";
-import {Footer} from "../footer/footer.jsx";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { loginFailure, loginStart, loginSuccess } from "../authContext/authAction"
+import {  useNavigate } from "react-router-dom";
 import GoogleLogin from "react-google-login";
 import { FaApple } from "react-icons/fa";
 import { SiFacebook } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc"
-// import { login } from "../authContext/apiCalls";
 import { AuthContext } from "../authContext/authContext";
 import axios from "axios";
+import { login } from "../authContext/apiCalls";
 
 export const Login = () => {
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
     const [isLoading, setLoading] = useState(false);
-    const {isFetching, dispatch} = useContext(AuthContext)
-    // const Auth = useContext(IsAuth);
+    const { dispatch} = useContext(AuthContext)
+
+
           const navigate=useNavigate()
 
-    const login = async (user, dispatch) => {
-        setLoading(true)
-        console.log("login button1");
-        dispatch(loginStart());
-        try {
-           
-          const res = await axios.post("https://mycorsproxy-forauth.herokuapp.com/https://agoda-auth-api.herokuapp.com/auth/login", user)
-          .then((res) => {
-            
-          console.log(res)
-          setLoading(false)
-          navigate('/')
-            dispatch(loginSuccess(res.data));
-          
-          })
-      
-          console.log("login button1");
-          
-          
-        } catch (err) {
-          alert("login failed")
-            setLoading(false)
-          dispatch(loginFailure());
-        }
-      
-      
-        // axios.post('https://mycorsproxy-forauth.herokuapp.com/https://agoda-auth-api.herokuapp.com/auth/login',user)
-        // .then(function (response) {
-        //   console.log(response);
-        // }).then(()=>{
-        //   let navigate=ToReach()
-        //      navigate('/')
-        // })
-        // .catch(function (error) {
-        //   console.log(error);
-        // });
-      
-      
-      
-      
-      };
       
 
     const googlee = useRef();
@@ -79,6 +36,7 @@ export const Login = () => {
         setLoading(true);
         let timer = setTimeout(() => {
             setLoading(false);
+           
         },2000);
 
         // clean-up
@@ -93,7 +51,10 @@ export const Login = () => {
         console.log(response.profileObj)
         // Auth.user = res;
         localStorage.setItem("userDetails", JSON.stringify(response.profileObj));
+      
         // Auth.toggle(!Auth.isAuth);
+       
+       
 
     }
     

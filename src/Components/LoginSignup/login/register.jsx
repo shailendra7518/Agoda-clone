@@ -1,25 +1,19 @@
-import { Typography, FormControlLabel,Checkbox,withStyles } from "@material-ui/core"
-import React, { useState, useEffect, useContext } from "react"
+import { Typography, FormControlLabel,Checkbox } from "@material-ui/core"
+import React, { useState, useEffect } from "react"
 import "./authStyles.css";
 import { Loading } from "./loading";
 import GoogleLogin from "react-google-login";
 import { FcGoogle } from "react-icons/fc";
-import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
-import { SiFacebook } from "react-icons/si";
-import Recaptcha, { ReactRecaptcha } from "react-recaptcha";
+import { FaApple, FaFacebook} from "react-icons/fa";
+
 import ReCAPTCHA from "react-google-recaptcha";
 import { Link, useNavigate } from "react-router-dom";
-import { Navbar } from "../navbar/navbar";
-import { Footer } from "../footer/footer";
+
 import axios from "axios";
-// import { Registeruser } from "../authContext/apiCalls";
-// import { IsAuth } from "../context/auth";
 
 
 export const Register = () => {
     const [isLoading, setLoading] = useState(false);
-    // const [isAuth, setAuth] = useState(false);
-    // const Auth = useContext(IsAuth);
     const navigate=useNavigate()
     const [RegisterUser,setRegisterUser]=useState({
         firstname:"",
@@ -38,7 +32,7 @@ export const Register = () => {
     const handlesubmit= async ()=>{
     setLoading(true)
         try {
-          const res = await axios.post("https://mycorsproxy-forauth.herokuapp.com/https://agoda-auth-api.herokuapp.com/auth/register",RegisterUser)
+          const res = await axios.post("https://agoda-clone.cyclic.app/auth/register",RegisterUser)
           .then((res) => {
             console.log(res)
             setLoading(false)
@@ -74,14 +68,8 @@ export const Register = () => {
         console.log("successfully registred")
         console.log(response)
         console.log(response.profileObj)
-        // Auth.user = res;
         localStorage.setItem("userDetails", JSON.stringify(response.profileObj));
-        // Auth.toggle(!Auth.isAuth);
-    }
-
-    // if(Auth.isAuth) {
-    //     return <Link to="/" />
-    // }
+        }
 
     return isLoading ? <Loading /> : (
         <>
@@ -189,7 +177,7 @@ export const Register = () => {
                 </div>
             </div>
 
-            {/* <Footer /> */}
+            
         </>
     )
 }

@@ -18,25 +18,6 @@ const navigate=useNavigate()
     getFormData();
   }, []);
   
-
-//   console.log(data);
-//  let hotel= [
-//     {
-//       "image":[
-//           {"image1":"https://bit.ly/3wUkgds"},
-//           {"image2":"https://bit.ly/3NMoR7N"},
-//           {"image3":"https://bit.ly/3JW6fQe"},
-//           {"image4":"https://bit.ly/3ISYbyn"}
-//       ],
-//       "name": "Devesh Verma",       
-//       "age": "21",
-//       "address": "pathan ka bagg, Dhamera Adda bulandshahr",
-//       "salary": "45000",
-//       "department": "IT",
-//       "id": 1
-//     }
-     
-//   ]
 const [Numberofroom,setNumberofroom]=useState("1")
 
 let roomtype=["Luxury King Room","Luxury Premium Room","Deluxe Suite - Free One-Way Airport Transfer","Residence","Single Luxury"]

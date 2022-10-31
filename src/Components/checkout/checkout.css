@@ -18,7 +18,7 @@
   }
    */
   :root{
-    --container__size-lg : 55%;
+    --container__size-lg : 75%;
     --container__size-md : 90%;
     --container__size-sm : 95%;
   
@@ -43,7 +43,7 @@
     width: var(--container__size-lg);
     margin: 2rem auto;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns:2fr 1fr;
     grid-gap: 0.8rem;
 }
 

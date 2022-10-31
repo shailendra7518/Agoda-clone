@@ -287,7 +287,7 @@ export function TopDestOutSide() {
 
   return (
     <div className="main_Topdest_div">
-      <h2>Top destinations in India</h2>
+      <h2>Top destinations Outside India</h2>
      
       <div className="all_round_image">
         <div>
